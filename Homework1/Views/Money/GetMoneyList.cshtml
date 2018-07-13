@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Homework1.Models.ViewModels.MoneyViewModels>
+
+@{
+    Layout = "";
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recordDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+    </tr>
+    @{int i = 1;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @(i++)
+            </td>
+            <td>
+                @item.type
+            </td>
+            <td>
+                @item.recordDate.ToString("yyyy-MM-dd")
+            </td>
+            <td>
+                @item.amount.ToString("#,#")
+            </td>
+        </tr>
+    }
+
+</table>
+
