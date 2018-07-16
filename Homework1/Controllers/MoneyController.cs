@@ -26,9 +26,9 @@ namespace Homework1.Controllers
             {
                 moneyList.Add(new MoneyViewModels
                 {
-                    type = (rnd.Next() % 2 == 0 ? "支出" : "收入"),
-                    recordDate = DateTime.Now.AddDays(-i),
-                    amount = rnd.Next(0, short.MaxValue)
+                    Type = (rnd.Next() % 2 == 0 ? "支出" : "收入"),
+                    RecordDate = DateTime.Now.AddDays(-i),
+                    Amount = rnd.Next(0, short.MaxValue)
                 });
             }
 

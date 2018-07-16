@@ -2,6 +2,7 @@
 
 @{
     Layout = "";
+    int i = 1;
 }
 <table class="table table-bordered table-hover">
     <tr>
@@ -9,30 +10,29 @@
             #
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.type)
+            @Html.DisplayNameFor(model => model.Type)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.recordDate)
+            @Html.DisplayNameFor(model => model.RecordDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.amount)
+            @Html.DisplayNameFor(model => model.Amount)
         </th>
     </tr>
-    @{int i = 1;}
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @(i++)
+                @(++i)
             </td>
             <td>
-                @item.type
+                @item.Type
             </td>
             <td>
-                @item.recordDate.ToString("yyyy-MM-dd")
+                @item.RecordDate.ToString("yyyy-MM-dd")
             </td>
             <td>
-                @item.amount.ToString("#,#")
+                @item.Amount.ToString("#,#")
             </td>
         </tr>
     }

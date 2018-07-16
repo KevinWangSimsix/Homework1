@@ -10,15 +10,15 @@ namespace Homework1.Models.ViewModels
     public class MoneyViewModels
     {
         [Display(Name = "類別")]
-        public string type { get; set; }
+        public string Type { get; set; }
 
         [Display(Name = "日期")]
-        public DateTime recordDate { get; set; }
+        public DateTime RecordDate { get; set; }
 
         [Display(Name = "金額")]
-        public int amount { get; set; }
+        public int Amount { get; set; }
 
         [Display(Name = "備註")]
-        public string remark { get; set; }
+        public string Remark { get; set; }
     }
 }
